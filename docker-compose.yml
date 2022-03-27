@@ -3,7 +3,7 @@ services:
     dockernextjs:
         container_name: "docker-nextjs-application"
         ports:
-            - "8000:8000"
+            - "5000:8000"
         build: .
         volumes:
             - /docker-nextjs-application:/docker-nextjs-application
