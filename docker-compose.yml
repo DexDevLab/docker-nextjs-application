@@ -1,0 +1,11 @@
+version: '2.3.3'
+services:
+  docker-nextjs:
+    ports:
+      - "8000:3000"
+    volumes:
+      - ./files:.
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dexdevlab/docker-nextjs-application
