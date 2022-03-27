@@ -11,7 +11,7 @@ RUN yarn build
 
 FROM node:lts as runner
 WORKDIR /docker-nextjs-application
-VOLUME /files
+# VOLUME /files
 ENV NODE_ENV production
 # If you are using a custom next.config.js file, uncomment this line.
 COPY --from=builder /docker-nextjs-application/next.config.js ./

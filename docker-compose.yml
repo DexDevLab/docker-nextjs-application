@@ -1,5 +1,10 @@
 version: "3"
 services:
     dockernextjs:
+        container_name: "docker-nextjs-application"
+        ports:
+            - "8000:8000"
         build: .
-        image: dockernextjsapp
+        volumes:
+            - .:./files
+        image: dexdevlab/docker-nextjs-application
