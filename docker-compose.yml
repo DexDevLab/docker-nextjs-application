@@ -6,5 +6,5 @@ services:
             - "5000:3000"
         build: .
         volumes:
-            - .:/docker-nextjs-application
+            - /docker-nextjs-application:/docker-nextjs-application
         image: dexdevlab/docker-nextjs-application
