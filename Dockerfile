@@ -5,7 +5,7 @@ RUN yarn install --frozen-lockfile
 
 FROM node:latest as builder
 WORKDIR /docker-nextjs-application
-COPY . .
+COPY ./src .
 COPY --from=dependencies /docker-nextjs-application/node_modules ./node_modules
 RUN yarn build
 
