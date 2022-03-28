@@ -1,4 +1,3 @@
-# FROM node:alpine as dependencies
 FROM node:alpine
 
 RUN mkdir -p /docker-nextjs-application
