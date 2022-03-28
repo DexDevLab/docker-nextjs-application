@@ -1,4 +1,5 @@
 FROM node:latest as dependencies
+RUN mkdir -p /docker-nextjs-application
 WORKDIR /docker-nextjs-application
 COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
