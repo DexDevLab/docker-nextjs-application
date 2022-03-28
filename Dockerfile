@@ -6,11 +6,10 @@ WORKDIR /docker-nextjs-application
 
 COPY package*.json yarn.lock ./
 
-ENV NODE_ENV production
-
 COPY . .
 
 RUN yarn install --frozen-lockfile
+ENV NODE_ENV production
 RUN yarn build
 
 EXPOSE 3000
