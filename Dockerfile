@@ -1,7 +1,9 @@
 # FROM node:alpine as dependencies
 FROM node:alpine
 
-RUN mkdir -p /docker-nextjs-application
+VOLUME [ "/docker-nextjs-application" ]
+
+#RUN mkdir -p /docker-nextjs-application
 
 WORKDIR /docker-nextjs-application
 
