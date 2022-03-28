@@ -1,15 +1,15 @@
-FROM node:lts as dependencies
+FROM node:latest as dependencies
 WORKDIR /docker-nextjs-application
 COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
 
-FROM node:lts as builder
+FROM node:latest as builder
 WORKDIR /docker-nextjs-application
 COPY . .
 COPY --from=dependencies /docker-nextjs-application/node_modules ./node_modules
 RUN yarn build
 
-FROM node:lts as runner
+FROM node:latest as runner
 WORKDIR /docker-nextjs-application
 ENV NODE_ENV production
 # If you are using a custom next.config.js file, uncomment this line.
