@@ -6,7 +6,7 @@ RUN mkdir -p /docker-nextjs-application
 WORKDIR /docker-nextjs-application
 
 # COPY package*.json yarn.lock ./
-COPY package*.json yarn.lock /docker-nextjs-application/
+COPY package.json yarn.lock /docker-nextjs-application/
 
 RUN yarn install --frozen-lockfile
 
