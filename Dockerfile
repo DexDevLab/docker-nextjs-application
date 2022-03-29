@@ -13,7 +13,7 @@ RUN yarn build
 FROM node:latest as runner
 WORKDIR /docker-nextjs-application
 ENV NODE_ENV production
-# If you are using a custom next.config.js file, uncomment this line.
+# COMENTE A LINHA ABAIXO CASO NÃO UTILIZE UMA ARQUIVO NEXT.CONFIG.JS PRÓPRIO
 COPY --from=builder /docker-nextjs-application/next.config.js ./
 
 COPY --from=builder /docker-nextjs-application/public ./public
