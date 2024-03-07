@@ -1,0 +1,13 @@
+version: "3"
+services:
+    dockernextjs:
+        container_name: "docker-nextjs-application"
+        image: dexdevlab/docker-nextjs-application
+        ports:
+            - "5000:3000"
+            # COMENTE A LINHA ABAIXO CASO QUEIRA USAR DOCKERFILE LOCAL NA
+            #  PASTA DO PROJETO
+        build: https://github.com/DexDevLab/docker-nextjs-application.git
+            #  DESCOMENTE A LINHA ABAIXO CASO QUEIRA USAR DOCKERFILE LOCAL NA
+            #  PASTA DO PROJETO
+        # build: .
